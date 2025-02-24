@@ -1,5 +1,6 @@
 package com.eraysirdas.retrofitjava.Adapter;
 
+import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public int getItemCount() {
         return cryptoModelArrayList.size();
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void filterList(ArrayList<CryptoModel> filteredList) {
+        cryptoModelArrayList = filteredList;
+        notifyDataSetChanged();
     }
 
     public class RowHolder extends RecyclerView.ViewHolder {

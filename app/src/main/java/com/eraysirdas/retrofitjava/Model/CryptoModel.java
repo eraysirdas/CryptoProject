@@ -8,4 +8,12 @@ public class CryptoModel {
     public String currency;
     @SerializedName("price")
     public String price;
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
 }
